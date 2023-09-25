@@ -1,0 +1,114 @@
+@font-face {
+    font-family:spiderman ;
+    src: url(../fonts/Spider-Man.otf);
+}
+@font-face {
+    font-family:montserrat ;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+body{
+    background: linear-gradient(to left, #1A2841 , #0B1322 );
+    overflow-x: hidden;
+}
+.navbar-nav li a.nav-link{
+    color:#fff !important;
+    font-size: 1.6em;
+    font-family: spiderman;
+    letter-spacing: 1px;
+}
+.nav-item{
+    margin-right: 30px;
+    padding: 0px 20px;
+    transition: 0.6s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.nav-item:hover{
+    border-radius: 5px;
+    color: #a40305!important;
+    position: relative;
+    background: linear-gradient(to top, #a40305,#1A2841);
+    transition: 0.5s;
+    box-shadow: 8px 8px 0 #fbc738;
+    
+}
+.nav-item:hover:before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition: 0.2s ease-in-out;
+}
+
+
+._description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+._description::before {
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-image: url('../images/logo/spiderman-Spider.png');
+    opacity: 0.2;
+    position: absolute;
+    margin: 0 auto;
+    left:0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Place it behind the content */
+}
+
+
+
+._description h1{
+    width: 100%;
+    font-size: 7rem !important;
+    color: #fff;
+    font-family: spiderman, serif;
+}
+._description h2{
+    font-size: 2rem !important;
+    color: #fff;
+    font-style: normal;
+    font-family: montserrat, serif;
+    margin-top: -35px;
+}
+._spiderMan img{
+    margin-top: 50px;
+    position: absolute;
+    right: 0;
+    height: 120vh;
+    z-index: -1;
+    margin-right: -100px;
+}
+.smTitle{
+    margin-top: -250px !important;
+}
+
+@media screen and (max-width: 767px) {
+    
+    ._spiderMan img{
+        width: 100% !important;
+        height: auto;
+        margin-right: 0px !important;
+        z-index: 1;
+        margin-top: 100px;
+    }
+    ._spiderMan{
+        height: 30vh !important;
+        margin-bottom: 0;
+    }
+    .smTitle{
+        margin-top: 0px !important;
+    }
+}
